@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+$colors: (
+  "grey-dark": #595959,
+  "grey-mid": #616161,
+  "grey-light": #D1D1D1,
+  "green-dark": #184A00,
+  "green-mid": #148E00,
+  "green-light": #E8FFE4,
+  "yellow": #F4FF79,
+  "red": #E83801,
+  "blue": #50C1FC,
+);
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Lilita One', sans-serif;
+
+  &.green {
+    color: map-get($colors, "green-mid");
+  }
+  &.red {
+    color: map-get($colors, "red");
+  }
+  &.black {
+    color: #000;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dialog-box {
+  height: 50px;
+  margin: -60px 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  transition: margin-top 1s ease-in-out;
+
+  &.open {
+    margin-top: 0px;
+  }
+
+  &.error {
+    background-color: map-get($colors, "red");
+    color: #fff;
+  }
+  &.success {
+    background-color: map-get($colors, "green-mid");
+    color: #000;
+  }
+  &.info {
+    background-color: map-get($colors, "blue");
+    color: #000;
+  }
+}
+
+.wrapper {
+  background-image: url('images/samambaia-1200x675.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .form {
+    margin: 70px 0;
+    max-width: 360px;
+
+    .input-container {
+      margin-bottom: 15px;
+      border-radius: 6px;
+      background-color: white;
+      border-color: map-get($colors, "grey-dark");
+      border-style: solid;
+      border-width: 1px;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+
+      .text-input,
+      .password-input {
+        border: none;
+        font-size: 14px;
+        height: 21px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .icon-input {
+        margin-left: auto;
+      }
+    }
+
+    .button-container {
+      margin-top: 30px;
+
+      .form-button {
+        width: 100%;
+        background-color: map-get($colors, "green-mid");
+        color: white;
+        border-width: 1px;
+        border-style: solid;
+        border-color: map-get($colors, "green-dark");
+        border-radius: 6px;
+        font-size: 18px;
+        height: 44px;
+
+        .icon-container {
+          margin: 8px;
+        }
+      }
+    }
+  }
+
+  .form-links {
+    text-align: center;
+
+    .text-link-container {
+      margin: 15px 0;
+
+      .link {
+        text-decoration: none;
+        color: map-get($colors, "green-dark");
+      }
+    }
+  }
+}
+
+header {
+  display: flex;
+  background-color: map-get($colors, "green-light");
+  box-shadow: 0 4px 4px #828282;
+
+  .logo-container {
+    padding: 1rem;
+  }
+
+  .text-container {
+    padding-left: 1rem;
+
+    .brand-title {
+      color: map-get($colors, "green-mid");
+    }
+
+    .breadcrumbs-container {
+      color: map-get($colors, "grey-mid");
+
+      .icon {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+nav {
+  background-color: map-get($colors, "green-dark");
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+
+    .nav-item {
+      padding: 1rem;
+
+      &.current .icon-link-container .link {
+        .icon,
+        .text {
+            color: map-get($colors, "yellow");
+        }
+      }
+
+      .icon-link-container {
+        display: inline;
+
+        .link {
+
+          .icon,
+          .text {
+            color: map-get($colors, "green-light");
+          }
+
+          .icon {
+            text-align: center;
+          }
+
+          .text {
+            margin-top: 6px;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard-screen {
+  padding: 1rem 0.5rem;
+  text-align: center;
+
+  .inner-container {
+    padding: 2rem 0;
+
+    .icon {
+      color: map-get($colors, "red");
+    }
+
+    .description {
+      margin: 1.5rem 0;
+    }
+    
+    .button-container {
+      margin: 2rem 0;
+
+      .outline-button {
+        cursor: pointer;
+        background-color: white;
+        border-color: map-get($colors, "green-dark");
+        border-width: 1px;
+        border-radius: 6px;
+        padding: 1rem;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .form-bullets-container {
+    display: flex;
+    justify-content: center;
+
+    .step-bullet {
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem;
+
+      &.green {
+        border-color: map-get($colors, "green-dark");
+        background-color: map-get($colors, "green-dark");
+        color: white;
+      }
+      &.red {
+        border-color: map-get($colors, "red");
+        color: map-get($colors, "red");
+      }
+      &.shadow {
+        box-shadow: 0 0 4px map-get($colors, "red");
+      }
+    }
+  }
+
+  .form-step {
+
+    .form-fields {
+      text-align: left;
+
+      .input-container {
+        margin-bottom: 15px;
+        border-radius: 6px;
+        background-color: white;
+        border-color: map-get($colors, "grey-dark");
+        border-style: solid;
+        border-width: 1px;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+
+        .text-input,
+        .password-input {
+          border: none;
+          font-size: 14px;
+          height: 21px;
+          width: 100%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .icon-input {
+          margin-left: auto;
+        }
+      }
+
+      .in-row-fields {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .submit-form-step-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid map-get($colors, "green-dark");
+    color: map-get($colors, "green-dark");
+    fill: map-get($colors, "green-dark");
+    background-color: map-get($colors, "green-light");
+    float: right;
+    margin-top: -50px;
+  }
+}

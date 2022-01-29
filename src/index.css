@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+html,
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Lilita One', sans-serif; }
+  h1.green,
+  h2.green,
+  h3.green,
+  h4.green {
+    color: #148E00; }
+  h1.red,
+  h2.red,
+  h3.red,
+  h4.red {
+    color: #E83801; }
+  h1.black,
+  h2.black,
+  h3.black,
+  h4.black {
+    color: #000; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.dialog-box {
+  height: 50px;
+  margin: -60px 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  transition: margin-top 1s ease-in-out; }
+  .dialog-box.open {
+    margin-top: 0px; }
+  .dialog-box.error {
+    background-color: #E83801;
+    color: #fff; }
+  .dialog-box.success {
+    background-color: #148E00;
+    color: #000; }
+  .dialog-box.info {
+    background-color: #50C1FC;
+    color: #000; }
+
+.wrapper {
+  background-image: url("images/samambaia-1200x675.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; }
+  .wrapper .form {
+    margin: 70px 0;
+    max-width: 360px; }
+    .wrapper .form .input-container {
+      margin-bottom: 15px;
+      border-radius: 6px;
+      background-color: white;
+      border-color: #595959;
+      border-style: solid;
+      border-width: 1px;
+      display: flex;
+      align-items: center;
+      padding: 4px; }
+      .wrapper .form .input-container .text-input,
+      .wrapper .form .input-container .password-input {
+        border: none;
+        font-size: 14px;
+        height: 21px; }
+        .wrapper .form .input-container .text-input:focus,
+        .wrapper .form .input-container .password-input:focus {
+          outline: none; }
+      .wrapper .form .input-container .icon-input {
+        margin-left: auto; }
+    .wrapper .form .button-container {
+      margin-top: 30px; }
+      .wrapper .form .button-container .form-button {
+        width: 100%;
+        background-color: #148E00;
+        color: white;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #184A00;
+        border-radius: 6px;
+        font-size: 18px;
+        height: 44px; }
+        .wrapper .form .button-container .form-button .icon-container {
+          margin: 8px; }
+  .wrapper .form-links {
+    text-align: center; }
+    .wrapper .form-links .text-link-container {
+      margin: 15px 0; }
+      .wrapper .form-links .text-link-container .link {
+        text-decoration: none;
+        color: #184A00; }
+
+header {
+  display: flex;
+  background-color: #E8FFE4;
+  box-shadow: 0 4px 4px #828282; }
+  header .logo-container {
+    padding: 1rem; }
+  header .text-container {
+    padding-left: 1rem; }
+    header .text-container .brand-title {
+      color: #148E00; }
+    header .text-container .breadcrumbs-container {
+      color: #616161; }
+      header .text-container .breadcrumbs-container .icon {
+        padding: 0 0.5rem; }
+
+nav {
+  background-color: #184A00; }
+  nav .nav-list {
+    display: flex;
+    justify-content: center; }
+    nav .nav-list .nav-item {
+      padding: 1rem; }
+      nav .nav-list .nav-item.current .icon-link-container .link .icon,
+      nav .nav-list .nav-item.current .icon-link-container .link .text {
+        color: #F4FF79; }
+      nav .nav-list .nav-item .icon-link-container {
+        display: inline; }
+        nav .nav-list .nav-item .icon-link-container .link .icon,
+        nav .nav-list .nav-item .icon-link-container .link .text {
+          color: #E8FFE4; }
+        nav .nav-list .nav-item .icon-link-container .link .icon {
+          text-align: center; }
+        nav .nav-list .nav-item .icon-link-container .link .text {
+          margin-top: 6px;
+          font-size: 0.9rem; }
+
+.dashboard-screen {
+  padding: 1rem 0.5rem;
+  text-align: center; }
+  .dashboard-screen .inner-container {
+    padding: 2rem 0; }
+    .dashboard-screen .inner-container .icon {
+      color: #E83801; }
+    .dashboard-screen .inner-container .description {
+      margin: 1.5rem 0; }
+    .dashboard-screen .inner-container .button-container {
+      margin: 2rem 0; }
+      .dashboard-screen .inner-container .button-container .outline-button {
+        cursor: pointer;
+        background-color: white;
+        border-color: #184A00;
+        border-width: 1px;
+        border-radius: 6px;
+        padding: 1rem;
+        font-size: 16px; }
+  .dashboard-screen .form-bullets-container {
+    display: flex;
+    justify-content: center; }
+    .dashboard-screen .form-bullets-container .step-bullet {
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem; }
+      .dashboard-screen .form-bullets-container .step-bullet.green {
+        border-color: #184A00;
+        background-color: #184A00;
+        color: white; }
+      .dashboard-screen .form-bullets-container .step-bullet.red {
+        border-color: #E83801;
+        color: #E83801; }
+      .dashboard-screen .form-bullets-container .step-bullet.shadow {
+        box-shadow: 0 0 4px #E83801; }
+  .dashboard-screen .form-step .form-fields {
+    text-align: left; }
+    .dashboard-screen .form-step .form-fields .input-container {
+      margin-bottom: 15px;
+      border-radius: 6px;
+      background-color: white;
+      border-color: #595959;
+      border-style: solid;
+      border-width: 1px;
+      display: flex;
+      align-items: center;
+      padding: 4px; }
+      .dashboard-screen .form-step .form-fields .input-container .text-input,
+      .dashboard-screen .form-step .form-fields .input-container .password-input {
+        border: none;
+        font-size: 14px;
+        height: 21px;
+        width: 100%; }
+        .dashboard-screen .form-step .form-fields .input-container .text-input:focus,
+        .dashboard-screen .form-step .form-fields .input-container .password-input:focus {
+          outline: none; }
+      .dashboard-screen .form-step .form-fields .input-container .icon-input {
+        margin-left: auto; }
+    .dashboard-screen .form-step .form-fields .in-row-fields {
+      display: flex;
+      align-items: center; }
+  .dashboard-screen .submit-form-step-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #184A00;
+    color: #184A00;
+    fill: #184A00;
+    background-color: #E8FFE4;
+    float: right;
+    margin-top: -50px; }
